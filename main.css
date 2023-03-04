@@ -1,0 +1,176 @@
+:root {
+    - Light red: hsl(0, 100%, 67%) 
+    - Orangey yellow: hsl(39, 100%, 56%)
+    - Green teal: hsl(166, 100%, 37%)
+    - Cobalt blue: hsl(234, 85%, 45%)
+
+    - Light slate blue (background): hsl(252, 100%, 67%)
+    - Light royal blue (background): hsl(241, 81%, 54%)
+    
+    - Violet blue (circle): hsla(256, 72%, 46%, 1)
+    - Persian blue (circle): hsla(241, 72%, 46%, 0)
+
+    - White: hsl(0, 0%, 100%)
+    - Pale blue: hsl(221, 100%, 96%)
+    - Light lavender: hsl(241, 100%, 89%)
+    - Dark gray blue: hsl(224, 30%, 27%)
+}
+/* @import url([Hanken+Grotesk]https://fonts.google.com/specimen/Hanken+Grotesk); */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Hanken Grotesk", sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F0F8FF;
+}
+.card{
+    box-shadow: rgba(0,0,0,24) 0px 3px 8px;
+    border-radius: 2rem;
+    width: 650px;
+    background-color: white;
+}
+.card_container{
+    display: flex;
+    justify-content: space-between;   
+}
+.result{
+    width: 50%;
+    padding: 1rem 1.5rem ;
+    border-radius: 2rem;
+    background: linear-gradient(to bottom, #6A5ACD, #0000FF);
+    text-align: center;
+    display: flex;
+    flex-direction: column; /*Sắp xếp các mục theo hướng chiều dọc từ trên xuống dưới*/
+    align-items: center;
+    gap: 1rem;
+}
+.result .title{
+    color: #E6E6FA;
+    margin-bottom: 1rem;
+}
+.result .circle{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #4a24cf, #4533eb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /*Sắp xếp các mục theo hướng chiều dọc từ trên xuống dưới*/
+}
+.circle h1{
+    color: #fff;
+    font-size: 4rem;
+}
+.circle p{
+    color: #E6E6FA;
+}
+.result b{
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.result .info{
+    color: #E6E6FA;
+    width: 230px;
+}
+.summary{
+    width: 50%;
+    margin: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column; /*Sắp xếp các mục theo hướng chiều dọc từ trên xuống dưới*/
+    gap: 1rem; /*Sử dụng thuộc tính khoảng cách để chỉ định kích thước của khoảng cách giữa các hàng và cột.*/
+}
+.summary .title{
+    /* margin-bottom: 10px; */
+    color: #333;
+    font-weight: 800; /* Thuộc tính in đậm chữ*/
+}
+.rows{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+.row{
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem .5rem;
+}
+.row:nth-child(1){
+    background-color:#fff6f5;
+}
+.row:nth-child(1) .badge b{
+    color: #ff989d;
+}
+.row:nth-child(2){
+    background-color:#fffbf2;
+}
+.row:nth-child(2) .badge b{
+    color: #edb642;
+}
+.row:nth-child(3){
+    background-color:#f2fbfa;
+}
+.row:nth-child(3) .badge b{
+    color: #29ab89;
+}
+.row:nth-child(4){
+    background-color:#f3f3fd;
+}
+.row:nth-child(4) .badge b{
+    color: #2b3493;
+}
+.badge{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.row p{
+    color: gray;
+}
+.row b{
+    color: #2f3648;
+}
+.btn{
+    margin-top: auto;
+    padding: 1rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    background: #303b59;
+    color: #fff;
+}
+.btn:hover{
+    background: linear-gradient(to bottom, #6A5ACD, #0000FF);;
+}
+@media screen and (max-width:650px) {
+    body{
+        align-items: flex-start;
+        background-color: #fff;
+    }
+    .card{
+        box-shadow: none;
+    }
+    .card_container{
+        flex-direction: column;
+    }
+    .result{
+        border-radius: 0 0 1rem 1rem;
+        width: 100%;
+    }
+    .result .info{
+        width: 250px;
+    }
+    .summary{
+        width: 100%;
+    }
+}
